@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awais Ahmad | Aspiring AI Engineer</title>
+  <meta name="description" content="Awais Ahmad — Computer Science student focused on Generative AI, AI Agents, AI Automation, AI APIs, and practical AI projects.">
+  <meta property="og:title" content="Awais Ahmad | Aspiring AI Engineer">
+  <meta property="og:description" content="Computer Science student focused on Generative AI, AI Agents, AI Automation, AI APIs, and practical AI projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Awais Ahmad Portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================================
+       AWAIS AHMAD — AI PORTFOLIO
+       Combined CSS
+       ============================================================ */
+
+    /* ---------- CSS Reset & Base ---------- */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-primary: #07111F;
+      --bg-secondary: #0D1B2A;
+      --text-primary: #F5F7FA;
+      --text-secondary: #AAB7C4;
+      --accent-blue: #3B82F6;
+      --bright-blue: #60A5FA;
+      --border-color: rgba(59, 130, 246, 0.15);
+      --card-bg: rgba(13, 27, 42, 0.7);
+      --card-hover-bg: rgba(13, 27, 42, 0.95);
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --transition-fast: 0.2s ease;
+      --transition-medium: 0.3s ease;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --max-width: 1200px;
+      --nav-height: 72px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--nav-height);
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: var(--bright-blue);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    a:hover {
+      color: var(--accent-blue);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ---------- Container ---------- */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- Section ---------- */
+    .section {
+      padding: 96px 0;
+      position: relative;
+    }
+
+    .section-alt {
+      background-color: var(--bg-secondary);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 48px;
+      position: relative;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--accent-blue);
+      margin-top: 12px;
+      border-radius: 2px;
+    }
+
+    /* ---------- Reveal Animation ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      font-family: var(--font-family);
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+      line-height: 1.4;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-blue);
+      color: #ffffff;
+      border-color: var(--accent-blue);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--bright-blue);
+      border-color: var(--bright-blue);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-primary);
+      border-color: rgba(170, 183, 196, 0.3);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--bright-blue);
+      color: var(--bright-blue);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--bright-blue);
+      border-color: rgba(96, 165, 250, 0.4);
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(96, 165, 250, 0.1);
+      border-color: var(--bright-blue);
+      color: var(--bright-blue);
+    }
+
+    .btn-small {
+      padding: 8px 18px;
+      font-size: 0.85rem;
+    }
+
+    .btn-full {
+      width: 100%;
+    }
+
+    /* ---------- Navigation ---------- */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: transparent;
+      transition: background-color var(--transition-medium), box-shadow var(--transition-medium), backdrop-filter var(--transition-medium);
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+    }
+
+    .site-header.scrolled {
+      background-color: rgba(7, 17, 31, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 var(--border-color);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      transition: color var(--transition-fast);
+    }
+
+    .logo:hover {
+      color: var(--bright-blue);
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-link {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      transition: color var(--transition-fast), background-color var(--transition-fast);
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-link.active {
+      color: var(--bright-blue);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 2px;
+      background-color: var(--accent-blue);
+      border-radius: 1px;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+      transition: background-color var(--transition-fast);
+    }
+
+    .hamburger:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .hamburger-line {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: var(--text-primary);
+      border-radius: 2px;
+      transition: transform var(--transition-fast), opacity var(--transition-fast);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active .hamburger-line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: var(--nav-height);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-elements {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 30%, transparent 70%);
+    }
+
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .hero-particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background-color: var(--accent-blue);
+      border-radius: 50%;
+      opacity: 0.3;
+      animation: floatParticle 12s infinite ease-in-out;
+    }
+
+    @keyframes floatParticle {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.15;
+      }
+      25% {
+        opacity: 0.4;
+      }
+      50% {
+        transform: translateY(-40px) translateX(20px);
+        opacity: 0.25;
+      }
+      75% {
+        opacity: 0.35;
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 80px 24px;
+    }
+
+    .hero-text {
+      max-width: 680px;
+    }
+
+    .hero-greeting {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--bright-blue);
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-name {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .hero-headline {
+      font-size: clamp(1.25rem, 3vw, 1.75rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .hero-subheadline {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      font-weight: 500;
+      color: var(--bright-blue);
+      margin-bottom: 24px;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-intro {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .hero-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: #22c55e;
+      border-radius: 50%;
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+      }
+      50% {
+        opacity: 0.8;
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+      }
+    }
+
+    /* ---------- About ---------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-secondary);
+      margin-bottom: 18px;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-info {
+      display: grid;
+      gap: 20px;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 28px;
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .info-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-blue);
+    }
+
+    .info-value {
+      font-size: 1rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    /* ---------- Skills ---------- */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .skill-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      transition: border-color var(--transition-medium), transform var(--transition-medium), box-shadow var(--transition-medium);
+    }
+
+    .skill-card:hover {
+      border-color: rgba(96, 165, 250, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .skill-category {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--bright-blue);
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-list li {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      background-color: rgba(59, 130, 246, 0.08);
+      border: 1px solid rgba(59, 130, 246, 0.12);
+      padding: 5px 12px;
+      border-radius: 20px;
+      transition: background-color var(--transition-fast), color var(--transition-fast);
+    }
+
+    .skill-list li:hover {
+      background-color: rgba(59, 130, 246, 0.18);
+      color: var(--text-primary);
+    }
+
+    /* ---------- Projects ---------- */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color var(--transition-medium), transform var(--transition-medium), box-shadow var(--transition-medium), background-color var(--transition-medium);
+    }
+
+    .project-card:hover {
+      border-color: rgba(96, 165, 250, 0.35);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+      background-color: var(--card-hover-bg);
+    }
+
+    .project-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      line-height: 1.65;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .tech-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--bright-blue);
+      background-color: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      padding: 3px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .project-features {
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .project-features li {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      padding: 3px 0 3px 18px;
+      position: relative;
+    }
+
+    .project-features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent-blue);
+      border-radius: 50%;
+      opacity: 0.6;
+    }
+
+    .project-card .btn {
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+    /* ---------- AI Automation ---------- */
+    .automation-intro {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 720px;
+      margin-bottom: 48px;
+      line-height: 1.8;
+    }
+
+    .workflow-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 48px;
+    }
+
+    .workflow-step {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px 32px;
+      min-width: 260px;
+      text-align: center;
+      transition: border-color var(--transition-medium), transform var(--transition-medium);
+    }
+
+    .workflow-step:hover {
+      border-color: rgba(96, 165, 250, 0.4);
+      transform: scale(1.02);
+    }
+
+    .workflow-label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .workflow-arrow {
+      font-size: 1.25rem;
+      color: var(--accent-blue);
+      padding: 6px 0;
+      opacity: 0.7;
+    }
+
+    .automation-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .automation-tags .tech-tag {
+      font-size: 0.85rem;
+      padding: 8px 18px;
+    }
+
+    /* ---------- Education ---------- */
+    .education-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 36px;
+      max-width: 640px;
+      transition: border-color var(--transition-medium);
+    }
+
+    .education-card:hover {
+      border-color: rgba(96, 165, 250, 0.3);
+    }
+
+    .education-degree {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .education-institution {
+      font-size: 1.05rem;
+      color: var(--bright-blue);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .education-location {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .education-semester {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-blue);
+      background-color: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      padding: 4px 14px;
+      border-radius: 20px;
+    }
+
+    /* ---------- Current Focus ---------- */
+    .focus-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .focus-tag {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 10px 22px;
+      border-radius: var(--radius-sm);
+      transition: border-color var(--transition-fast), transform var(--transition-fast), background-color var(--transition-fast);
+      cursor: default;
+    }
+
+    .focus-tag:hover {
+      border-color: rgba(96, 165, 250, 0.4);
+      transform: translateY(-2px);
+      background-color: rgba(59, 130, 246, 0.08);
+    }
+
+    .focus-statement {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      line-height: 1.8;
+      font-style: italic;
+      border-left: 3px solid var(--accent-blue);
+      padding-left: 20px;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-intro {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin-bottom: 48px;
+      line-height: 1.8;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 28px;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-blue);
+    }
+
+    .contact-value {
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .contact-value:hover {
+      color: var(--bright-blue);
+    }
+
+    .contact-form {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 32px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      font-family: var(--font-family);
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      background-color: rgba(7, 17, 31, 0.6);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(170, 183, 196, 0.5);
+    }
+
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-top: 12px;
+      text-align: center;
+      opacity: 0.7;
+    }
+
+    /* ---------- Footer ---------- */
+    .site-footer {
+      background-color: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 40px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+    }
+
+    .footer-copy {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .footer-tagline {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .back-to-top {
+      margin-top: 12px;
+      font-family: var(--font-family);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--bright-blue);
+      background: none;
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      padding: 8px 20px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .back-to-top:hover {
+      background-color: rgba(96, 165, 250, 0.1);
+      border-color: var(--bright-blue);
+      transform: translateY(-2px);
+    }
+
+    /* ---------- Modal ---------- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background-color: rgba(7, 17, 31, 0.85);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition-medium), visibility var(--transition-medium);
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      max-width: 560px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      position: relative;
+      transform: translateY(16px) scale(0.98);
+      transition: transform var(--transition-medium);
+    }
+
+    .modal-overlay.open .modal {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-size: 1.75rem;
+      line-height: 1;
+      color: var(--text-secondary);
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color var(--transition-fast), transform var(--transition-fast);
+      padding: 4px;
+    }
+
+    .modal-close:hover {
+      color: var(--text-primary);
+      transform: scale(1.1);
+    }
+
+    .modal-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      padding-right: 32px;
+    }
+
+    .modal-body p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .modal-body .modal-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 16px 0;
+    }
+
+    .modal-body .modal-features {
+      margin-top: 16px;
+    }
+
+    .modal-body .modal-features li {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      padding: 4px 0 4px 20px;
+      position: relative;
+    }
+
+    .modal-body .modal-features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent-blue);
+      border-radius: 50%;
+      opacity: 0.6;
+    }
+
+    .modal-body .modal-note {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      opacity: 0.7;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+      font-style: italic;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1024px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --nav-height: 64px;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .section-title {
+        font-size: 1.65rem;
+        margin-bottom: 36px;
+      }
+
+      .main-nav {
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        background-color: rgba(7, 17, 31, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border-color);
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition-medium), padding var(--transition-medium);
+      }
+
+      .main-nav.open {
+        max-height: 400px;
+        padding: 16px 0 24px;
+      }
+
+      .nav-list {
+        flex-direction: column;
+        gap: 4px;
+        padding: 0 24px;
+      }
+
+      .nav-link {
+        display: block;
+        padding: 12px 16px;
+        font-size: 1rem;
+        border-radius: var(--radius-sm);
+      }
+
+      .nav-link.active::after {
+        display: none;
+      }
+
+      .nav-link.active {
+        background-color: rgba(59, 130, 246, 0.1);
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: calc(var(--nav-height) + 40px);
+        padding-bottom: 60px;
+      }
+
+      .hero-content {
+        padding: 40px 24px;
+      }
+
+      .hero-name {
+        font-size: clamp(2rem, 8vw, 2.75rem);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow-step {
+        min-width: 200px;
+        padding: 14px 24px;
+      }
+
+      .contact-form {
+        padding: 24px;
+      }
+
+      .modal {
+        padding: 28px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .section {
+        padding: 56px 0;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 28px;
+      }
+
+      .hero-name {
+        font-size: 1.85rem;
+      }
+
+      .hero-headline {
+        font-size: 1.1rem;
+      }
+
+      .hero-intro {
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        padding: 11px 22px;
+        font-size: 0.9rem;
+      }
+
+      .project-card {
+        padding: 22px;
+      }
+
+      .skill-card {
+        padding: 22px;
+      }
+
+      .education-card {
+        padding: 24px;
+      }
+
+      .workflow-step {
+        min-width: 170px;
+        padding: 12px 18px;
+      }
+
+      .workflow-label {
+        font-size: 0.85rem;
+      }
+
+      .focus-tag {
+        font-size: 0.82rem;
+        padding: 8px 16px;
+      }
+
+      .modal {
+        padding: 24px 20px;
+      }
+
+      .modal-title {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* ---------- Reduced Motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+      .hero-particle {
+        display: none;
+      }
+    }
+
+    /* ---------- Focus Visible ---------- */
+    :focus-visible {
+      outline: 2px solid var(--bright-blue);
+      outline-offset: 2px;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--bright-blue);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== NAVIGATION ========== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#home" class="logo">Awais Ahmad</a>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section id="home" class="hero section">
+      <div class="hero-bg-elements" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Awais Ahmad</h1>
+          <p class="hero-headline">Aspiring AI Engineer</p>
+          <p class="hero-subheadline">Generative AI | AI Agents | AI Automation</p>
+          <p class="hero-intro">Computer Science student focused on building practical AI-powered solutions, intelligent agents, and automation workflows.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+          <p class="hero-status"><span class="status-dot"></span> Currently pursuing ADP Computer Science</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>Computer Science student pursuing an Associate Degree Program in Computer Science (ADP CS) with a strong focus on Artificial Intelligence, Generative AI, AI Agents, and AI Automation. I am building practical projects involving n8n, AI APIs, Airtable, JavaScript, HTML/CSS, Node.js, and C++ using AI-assisted development workflows.</p>
+            <p>My current interests include building AI solutions for business automation, customer support, academic management, and intelligent business applications.</p>
+            <p>I am currently looking for internship opportunities where I can gain professional industry experience and strengthen my practical AI engineering skills.</p>
+          </div>
+          <div class="about-info reveal">
+            <div class="info-item">
+              <span class="info-label">Location</span>
+              <span class="info-value">Lahore, Pakistan</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Education</span>
+              <span class="info-value">ADP Computer Science</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Current Semester</span>
+              <span class="info-value">2nd Semester</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Focus</span>
+              <span class="info-value">AI + Automation + AI Agents</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">AI &amp; Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3 class="skill-category">Artificial Intelligence</h3>
+            <ul class="skill-list">
+              <li>Generative AI &amp; LLMs</li>
+              <li>AI Agents</li>
+              <li>AI Automation</li>
+              <li>AI APIs</li>
+              <li>Prompt Engineering</li>
+              <li>Machine Learning</li>
+              <li>Deep Learning</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3 class="skill-category">Automation &amp; Integration</h3>
+            <ul class="skill-list">
+              <li>n8n</li>
+              <li>Airtable</li>
+              <li>API Integration</li>
+              <li>Workflow Automation</li>
+              <li>Business Process Automation</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3 class="skill-category">Programming &amp; Development</h3>
+            <ul class="skill-list">
+              <li>C++</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Node.js</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3 class="skill-category">Tools &amp; Technologies</h3>
+            <ul class="skill-list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>AI Development Tools</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Featured Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card reveal" data-project="1">
+            <h3 class="project-title">AI Customer Support Agent</h3>
+            <p class="project-desc">An AI-powered customer support automation workflow designed to assist with customer query handling and information retrieval.</p>
+            <div class="project-tech">
+              <span class="tech-tag">n8n</span>
+              <span class="tech-tag">Airtable</span>
+              <span class="tech-tag">AI APIs</span>
+            </div>
+            <ul class="project-features">
+              <li>AI-powered customer support workflow</li>
+              <li>Airtable-based customer/business data</li>
+              <li>Automated query handling</li>
+              <li>Information retrieval</li>
+              <li>API integration</li>
+              <li>AI agent concepts</li>
+              <li>Workflow automation</li>
+            </ul>
+            <button class="btn btn-small btn-outline project-details-btn" data-project="1">View Details</button>
+          </article>
+
+          <article class="project-card reveal" data-project="2">
+            <h3 class="project-title">Smart Academic Management System</h3>
+            <p class="project-desc">An AI-assisted academic management solution designed around structured academic data and workflow automation.</p>
+            <div class="project-tech">
+              <span class="tech-tag">n8n</span>
+              <span class="tech-tag">AI Agent</span>
+              <span class="tech-tag">Airtable</span>
+            </div>
+            <ul class="project-features">
+              <li>Student records</li>
+              <li>Attendance</li>
+              <li>Marks</li>
+              <li>Timetable</li>
+              <li>Teachers</li>
+              <li>Fees</li>
+              <li>AI agent integration concepts</li>
+              <li>Workflow automation</li>
+            </ul>
+            <button class="btn btn-small btn-outline project-details-btn" data-project="2">View Details</button>
+          </article>
+
+          <article class="project-card reveal" data-project="3">
+            <h3 class="project-title">HB Advertisers Business Management System</h3>
+            <p class="project-desc">A business management application developed for HB Advertisers.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Airtable</span>
+            </div>
+            <ul class="project-features">
+              <li>Customer record management</li>
+              <li>Business data management</li>
+              <li>Invoice generation</li>
+              <li>Quotation generation</li>
+              <li>Payment management</li>
+              <li>Profit management</li>
+              <li>Customer records</li>
+              <li>Airtable database integration</li>
+            </ul>
+            <button class="btn btn-small btn-outline project-details-btn" data-project="3">View Details</button>
+          </article>
+
+          <article class="project-card reveal" data-project="4">
+            <h3 class="project-title">HB Advertisers Full-Stack Business Website</h3>
+            <p class="project-desc">A business website with frontend and backend components focused on business information, services, and database-backed functionality.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Airtable</span>
+            </div>
+            <ul class="project-features">
+              <li>Responsive web structure</li>
+              <li>Business information</li>
+              <li>Service presentation</li>
+              <li>Backend functionality</li>
+              <li>Database integration</li>
+            </ul>
+            <button class="btn btn-small btn-outline project-details-btn" data-project="4">View Details</button>
+          </article>
+
+          <article class="project-card reveal" data-project="5">
+            <h3 class="project-title">Smart Canteen Management System</h3>
+            <p class="project-desc">A C++ academic project focused on structured canteen management and transaction handling.</p>
+            <div class="project-tech">
+              <span class="tech-tag">C++</span>
+            </div>
+            <ul class="project-features">
+              <li>Customer information</li>
+              <li>Multi-item ordering</li>
+              <li>Pricing calculations</li>
+              <li>GST calculations</li>
+              <li>Discount calculations</li>
+              <li>Payment handling</li>
+              <li>Receipt generation</li>
+              <li>Structured programming</li>
+            </ul>
+            <button class="btn btn-small btn-outline project-details-btn" data-project="5">View Details</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== AI AUTOMATION ========== -->
+    <section id="automation" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">AI Automation &amp; Intelligent Workflows</h2>
+        <p class="automation-intro reveal">I am particularly interested in using AI agents, APIs, structured data, and workflow automation to solve repetitive business and administrative tasks.</p>
+        <div class="workflow-visual reveal">
+          <div class="workflow-step"><span class="workflow-label">User Input</span></div>
+          <div class="workflow-arrow">↓</div>
+          <div class="workflow-step"><span class="workflow-label">AI Agent</span></div>
+          <div class="workflow-arrow">↓</div>
+          <div class="workflow-step"><span class="workflow-label">API / Workflow</span></div>
+          <div class="workflow-arrow">↓</div>
+          <div class="workflow-step"><span class="workflow-label">Airtable / Structured Data</span></div>
+          <div class="workflow-arrow">↓</div>
+          <div class="workflow-step"><span class="workflow-label">Automated Response</span></div>
+        </div>
+        <div class="automation-tags reveal">
+          <span class="tech-tag">n8n</span>
+          <span class="tech-tag">AI APIs</span>
+          <span class="tech-tag">Airtable</span>
+          <span class="tech-tag">AI Agents</span>
+          <span class="tech-tag">Workflow Automation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Education</h2>
+        <div class="education-card reveal">
+          <h3 class="education-degree">Associate Degree Program in Computer Science (ADP CS)</h3>
+          <p class="education-institution">Riphah International University</p>
+          <p class="education-location">Lahore, Pakistan</p>
+          <p class="education-semester">Currently: 2nd Semester</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CURRENT FOCUS ========== -->
+    <section id="focus" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title reveal">Currently Exploring</h2>
+        <div class="focus-grid reveal">
+          <span class="focus-tag">Generative AI</span>
+          <span class="focus-tag">Large Language Models</span>
+          <span class="focus-tag">AI Agents</span>
+          <span class="focus-tag">AI Automation</span>
+          <span class="focus-tag">AI APIs</span>
+          <span class="focus-tag">Business Process Automation</span>
+          <span class="focus-tag">Intelligent Customer Support</span>
+          <span class="focus-tag">Machine Learning</span>
+          <span class="focus-tag">Software Development</span>
+        </div>
+        <p class="focus-statement reveal">Focused on turning AI concepts into practical projects and continuously strengthening my programming and AI engineering skills.</p>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Let's Build Something Intelligent</h2>
+        <p class="contact-intro reveal">I am currently interested in AI, automation, and junior software opportunities where I can learn from real-world development and contribute to practical projects.</p>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:awaistech.ai16@gmail.com" class="contact-value">awaistech.ai16@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <a href="tel:03074559199" class="contact-value">0307-4559199</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Lahore, Pakistan</span>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send via Email</button>
+            <p class="form-note">This form opens your email client to send a message to awaistech.ai16@gmail.com.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p class="footer-copy">© 2026 Awais Ahmad</p>
+      <p class="footer-tagline">Aspiring AI Engineer | Generative AI | AI Agents | AI Automation</p>
+      <button class="back-to-top" id="backToTop" aria-label="Back to top">↑ Back to top</button>
+    </div>
+  </footer>
+
+  <!-- ========== PROJECT MODAL ========== -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Close details">×</button>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    /* ============================================================
+       AWAIS AHMAD — AI PORTFOLIO
+       Combined JavaScript
+       ============================================================ */
+
+    (function () {
+      'use strict';
+
+      /* ---------- DOM References ---------- */
+      const header = document.getElementById('siteHeader');
+      const hamburger = document.getElementById('hamburger');
+      const mainNav = document.getElementById('mainNav');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const revealElements = document.querySelectorAll('.reveal');
+      const backToTop = document.getElementById('backToTop');
+      const modalOverlay = document.getElementById('modalOverlay');
+      const modalClose = document.getElementById('modalClose');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalBody = document.getElementById('modalBody');
+      const contactForm = document.getElementById('contactForm');
+      const heroParticles = document.getElementById('heroParticles');
+
+      /* ---------- Project Data for Modal ---------- */
+      const projectData = {
+        1: {
+          title: 'AI Customer Support Agent',
+          description: 'An AI-powered customer support automation workflow designed to assist with customer query handling and information retrieval.',
+          technologies: ['n8n', 'Airtable', 'AI APIs'],
+          features: [
+            'AI-powered customer support workflow',
+            'Airtable-based customer/business data',
+            'Automated query handling',
+            'Information retrieval',
+            'API integration',
+            'AI agent concepts',
+            'Workflow automation'
+          ],
+          note: 'This project explores practical AI agent concepts and workflow automation.'
+        },
+        2: {
+          title: 'Smart Academic Management System',
+          description: 'An AI-assisted academic management solution designed around structured academic data and workflow automation.',
+          technologies: ['n8n', 'AI Agent', 'Airtable'],
+          features: [
+            'Student records',
+            'Attendance',
+            'Marks',
+            'Timetable',
+            'Teachers',
+            'Fees',
+            'AI agent integration concepts',
+            'Workflow automation'
+          ],
+          note: 'This project focuses on applying AI agent concepts to academic administration.'
+        },
+        3: {
+          title: 'HB Advertisers Business Management System',
+          description: 'A business management application developed for HB Advertisers.',
+          technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Airtable'],
+          features: [
+            'Customer record management',
+            'Business data management',
+            'Invoice generation',
+            'Quotation generation',
+            'Payment management',
+            'Profit management',
+            'Customer records',
+            'Airtable database integration'
+          ],
+          note: 'A practical business management solution built with web technologies and Airtable.'
+        },
+        4: {
+          title: 'HB Advertisers Full-Stack Business Website',
+          description: 'A business website with frontend and backend components focused on business information, services, and database-backed functionality.',
+          technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Airtable'],
+          features: [
+            'Responsive web structure',
+            'Business information',
+            'Service presentation',
+            'Backend functionality',
+            'Database integration'
+          ],
+          note: 'A full-stack website project demonstrating frontend and backend integration.'
+        },
+        5: {
+          title: 'Smart Canteen Management System',
+          description: 'A C++ academic project focused on structured canteen management and transaction handling.',
+          technologies: ['C++'],
+          features: [
+            'Customer information',
+            'Multi-item ordering',
+            'Pricing calculations',
+            'GST calculations',
+            'Discount calculations',
+            'Payment handling',
+            'Receipt generation',
+            'Structured programming'
+          ],
+          note: 'An academic C++ project focused on structured programming and transaction handling.'
+        }
+      };
+
+      /* ---------- Sticky Navigation ---------- */
+      function handleScroll() {
+        if (window.scrollY > 20) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+
+        if (window.scrollY > 600) {
+          backToTop.style.opacity = '1';
+          backToTop.style.pointerEvents = 'auto';
+        } else {
+          backToTop.style.opacity = '0';
+          backToTop.style.pointerEvents = 'none';
+        }
+
+        updateActiveNav();
+      }
+
+      /* ---------- Active Navigation Indicator ---------- */
+      function updateActiveNav() {
+        const sections = document.querySelectorAll('section[id]');
+        let currentSection = '';
+
+        sections.forEach(function (section) {
+          const sectionTop = section.offsetTop - 120;
+          const sectionHeight = section.offsetHeight;
+          if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(function (link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + currentSection) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      /* ---------- Mobile Hamburger Menu ---------- */
+      function toggleMobileMenu() {
+        const isOpen = mainNav.classList.contains('open');
+        mainNav.classList.toggle('open');
+        hamburger.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', String(!isOpen));
+      }
+
+      function closeMobileMenu() {
+        mainNav.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+
+      /* ---------- Smooth Scrolling ---------- */
+      function smoothScrollTo(targetId) {
+        const target = document.querySelector(targetId);
+        if (!target) return;
+
+        const headerOffset = header.offsetHeight || 72;
+        const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+
+      /* ---------- Scroll Reveal (Intersection Observer) ---------- */
+      function initRevealObserver() {
+        if (!('IntersectionObserver' in window)) {
+          revealElements.forEach(function (el) {
+            el.classList.add('visible');
+          });
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+          }
+        );
+
+        revealElements.forEach(function (el) {
+          observer.observe(el);
+        });
+      }
+
+      /* ---------- Hero Particles (subtle) ---------- */
+      function createHeroParticles() {
+        if (!heroParticles) return;
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) return;
+
+        const particleCount = 18;
+
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement('div');
+          particle.classList.add('hero-particle');
+
+          const left = Math.random() * 100;
+          const top = Math.random() * 100;
+          const delay = Math.random() * 12;
+          const duration = 8 + Math.random() * 8;
+          const size = 2 + Math.random() * 2;
+
+          particle.style.left = left + '%';
+          particle.style.top = top + '%';
+          particle.style.animationDelay = delay + 's';
+          particle.style.animationDuration = duration + 's';
+          particle.style.width = size + 'px';
+          particle.style.height = size + 'px';
+
+          heroParticles.appendChild(particle);
+        }
+      }
+
+      /* ---------- Project Modal ---------- */
+      function openModal(projectId) {
+        const project = projectData[projectId];
+        if (!project) return;
+
+        modalTitle.textContent = project.title;
+
+        let html = '<p>' + project.description + '</p>';
+        html += '<div class="modal-tech">';
+        project.technologies.forEach(function (tech) {
+          html += '<span class="tech-tag">' + tech + '</span>';
+        });
+        html += '</div>';
+        html += '<ul class="modal-features">';
+        project.features.forEach(function (feature) {
+          html += '<li>' + feature + '</li>';
+        });
+        html += '</ul>';
+        html += '<p class="modal-note">' + project.note + '</p>';
+
+        modalBody.innerHTML = html;
+        modalOverlay.hidden = false;
+        void modalOverlay.offsetWidth;
+        modalOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        modalClose.focus();
+      }
+
+      function closeModal() {
+        modalOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+        setTimeout(function () {
+          modalOverlay.hidden = true;
+        }, 300);
+      }
+
+      /* ---------- Contact Form (mailto fallback) ---------- */
+      function handleContactForm(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+          alert('Please fill in all fields.');
+          return;
+        }
+
+        const subject = encodeURIComponent('Portfolio Contact from ' + name);
+        const body = encodeURIComponent(
+          'Name: ' + name + '\n' +
+          'Email: ' + email + '\n\n' +
+          'Message:\n' + message
+        );
+
+        window.location.href = 'mailto:awaistech.ai16@gmail.com?subject=' + subject + '&body=' + body;
+      }
+
+      /* ---------- Event Listeners ---------- */
+      function init() {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        if (hamburger) {
+          hamburger.addEventListener('click', toggleMobileMenu);
+        }
+
+        navLinks.forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            closeMobileMenu();
+            smoothScrollTo(targetId);
+            if (history.pushState) {
+              history.pushState(null, null, targetId);
+            }
+          });
+        });
+
+        if (backToTop) {
+          backToTop.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
+
+        document.querySelectorAll('.project-details-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            const projectId = this.getAttribute('data-project');
+            openModal(projectId);
+          });
+        });
+
+        if (modalClose) {
+          modalClose.addEventListener('click', closeModal);
+        }
+
+        if (modalOverlay) {
+          modalOverlay.addEventListener('click', function (e) {
+            if (e.target === modalOverlay) {
+              closeModal();
+            }
+          });
+        }
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && modalOverlay.classList.contains('open')) {
+            closeModal();
+          }
+        });
+
+        if (contactForm) {
+          contactForm.addEventListener('submit', handleContactForm);
+        }
+
+        window.addEventListener('resize', function () {
+          if (window.innerWidth > 768) {
+            closeMobileMenu();
+          }
+        });
+
+        initRevealObserver();
+        createHeroParticles();
+        handleScroll();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+    })();
+  </script>
+</body>
+</html>
